@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating on multiple selections</title>
+</head>
+<body>
+<h1 id="header">List</h1>
+<h2>Buy groceries</h2>
+<ul>
+<li id="one" class="hot">fresh figs</li>
+<li id="two" class="hot">pine nuts</li>
+<li id="three" class="hot">honey</li>
+<li id="four">balsamic vinegar</li>
+</ul>
+<h2>Comments</h2>
+<input type="text" id="test3" value="Mickey Mouse">
+<script>
+	let el = document.getElementById('one');
+	el.addEventListener("mouseover",function(){
+	document.getElementById("par").innerHTML="you are on par";
+});
+	el = document.getElementById('one');
+	el.addEventListener("mouseout",function(){
+	document.getElementById("par").innerHTML="";
+});
+	document.addEventListener("mousemove",function(e){
+		document.getElementById('ts').innerHTML=e.pageX + " " + e.pageY;
+	});
+	
+</script>
+<ul id="spec"> </ul>
+
+<p id="par"> </p>
+<p id="ts"> </p>
+</body>
+</html>
