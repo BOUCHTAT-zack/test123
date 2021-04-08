@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calculator</title>
+</head>
+<body>
+<p>you can multiply numbers here </p>
+<input type="number" id="n1" min="0" max="100">
+<input type="number" id="n2" min="0" max="100">
+<input type="button" id="oper" value="multiply">
+<p id="m"> </p>
+<script>
+	document.getElementById("oper").addEventListener("click",function(){
+		document.getElementById('m').innerHTML="the result is: "+ document.getElementById('n1').value*document.getElementById('n2').value;
+	});	
+</script>
+
+</body>
+</html>
